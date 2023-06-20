@@ -1,3 +1,5 @@
+from sorting_utils import read_input, format_and_print_output
+
 def swap(my_list, index1, index2):
     temp = my_list[index1]
     my_list[index1] = my_list[index2]
@@ -25,4 +27,7 @@ def quick_sort_helper(my_list, left, right):
 def quick_sort(my_list):
     return quick_sort_helper(my_list, 0, len(my_list)-1)
 
-print(quick_sort([4,6,1,7,3,2,5]))
+# print(quick_sort([4,6,1,7,3,2,5]))
+input_list = read_input()
+sorted_list = quick_sort(input_list)
+format_and_print_output(sorted_list)

@@ -1,3 +1,5 @@
+from sorting_utils import read_input, format_and_print_output
+
 def merge_sort(my_list):
     if len(my_list) == 1:
         return my_list
@@ -27,4 +29,8 @@ def merge_sort(my_list):
         
     return combined
 
-print(merge_sort([1,3,8,4,7,2]))
+# print(merge_sort([1,3,8,4,7,2]))
+
+input_list = read_input()
+sorted_list = merge_sort(input_list)
+format_and_print_output(sorted_list)
